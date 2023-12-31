@@ -1,0 +1,3 @@
+#.env files should be local
+.env
+.pyc
