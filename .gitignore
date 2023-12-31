@@ -1,3 +1,5 @@
 #.env files should be local
 .env
 .pyc
+
+__pycache__
