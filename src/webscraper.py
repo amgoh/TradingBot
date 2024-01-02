@@ -70,5 +70,7 @@ def predict_stock_opinion(stock, model):
     if(sentiments.count("neg") > sentiments.count("pos")):
         return "neg"
     # otherwise return positive sentiment, if equal, assume positive
-    else:
+    elif(sentiments.count("neg") < sentiments.count("pos")):
         return "pos"
+    else:
+        return "none"

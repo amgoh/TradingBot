@@ -1,12 +1,12 @@
 from alpaca.trading.requests import GetAssetsRequest
+from alpaca.trading.client import TradingClient
 from alpaca.trading.enums import AssetClass
 from alpaca.trading.requests import MarketOrderRequest
 from alpaca.trading.enums import OrderSide, TimeInForce
-from alpaca.data.requests import StockLatestBarRequest
 import webscraper as web
 import random
 
-def find_stock(tradeClient, dataClient) -> dict[str]:
+def find_stock(tradeClient: TradingClient) -> dict[str]:
     """
     Used to select a random tradable stock from a list of all U.S. Equities
     
@@ -25,16 +25,10 @@ def find_stock(tradeClient, dataClient) -> dict[str]:
     STOCK = asset.name # stock name
     SYMBOL = asset.symbol # stock symbol
     
-    # Search for the latest stock pricing information for the random stock
-    REQUEST_PARAMS = StockLatestBarRequest(symbol_or_symbols=SYMBOL)
-    STOCK_BARS = dataClient.get_stock_latest_bar(REQUEST_PARAMS)
-    PRICE = STOCK_BARS.get(SYMBOL).vwap # stock price
-    
     # Return value, dict
     stock_info = {
         'name' : STOCK,
-        'symbol' : SYMBOL,
-        'price' : PRICE
+        'symbol' : SYMBOL
     }
     
     return stock_info
@@ -68,12 +62,12 @@ def determine_sentiment(stock_info, nltk_classifier):
     
     return SENTIMENT
 
-def place_order(client, stock_info, sentiment):
+def place_order(client, stock_info, stock_price, sentiment, owned = False):
     """
     Places a buy/sell order based on the given stock info
     
     Parameter:
-        stock_info - A dict containing the stock info, can find info for random stock using find_stock() function
+        stock_info - A dict containing the stock name, stock symbol
     """
     
     stock_name = stock_info.get('name')
@@ -98,11 +92,15 @@ def place_order(client, stock_info, sentiment):
                 
                 print("Sold {} shares of {} ({}) at ${}.".format(num_shares, stock_symbol, stock_name, stock_price))
             except:
-                place_order(find_stock())
+                print("Don't own {} stock, unable to place a SELL order".format(stock_name))
         case "pos":
+            if(owned):
+                sentiment = "none"
+                return
+            
             market_order_data = MarketOrderRequest(
                         symbol=stock_symbol,
-                        qty=1000/stock_price,
+                        qty=10000/stock_price,
                         side=OrderSide.BUY,
                         time_in_force=TimeInForce.DAY
             )
@@ -111,4 +109,6 @@ def place_order(client, stock_info, sentiment):
                 order_data=market_order_data
             )
             
-            print("Bought {} shares of {} ({}) at ${}.".format(1000/stock_price, stock_symbol, stock_name, stock_price))
+            print("Bought {} shares of {} ({}) at ${}.".format(10000/stock_price, stock_symbol, stock_name, stock_price))
+        case "none":
+            print("Current sentiment of {} is neutral. No BUY or SELL orders performed".format(stock_name))
