@@ -62,15 +62,14 @@ def predict_stock_opinion(stock, model):
             sentiments.append(model.classify(featureset))
             
             
-        except:
+        except Exception:
             # catch exceptions, in case of an error accessing a webpage
+            print("error checking {} searches".format(stock))
             continue
         
     # check if more negative sentiment
     if(sentiments.count("neg") > sentiments.count("pos")):
         return "neg"
     # otherwise return positive sentiment, if equal, assume positive
-    elif(sentiments.count("neg") < sentiments.count("pos")):
-        return "pos"
     else:
-        return "none"
+        return "pos"
