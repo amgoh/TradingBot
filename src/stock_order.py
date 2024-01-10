@@ -63,35 +63,6 @@ def find_stock_list(tradeClient: TradingClient, dataClient: StockHistoricalDataC
     
     return stock_list
 
-def find_positions_info(tradeClient: TradingClient, dataClient: StockHistoricalDataClient, owned_stocks: dict[str, str]) -> list[dict[str]]:
-    """
-    Find the latest stock_info on all currently open positions
-
-    Returns:
-        A list of dicts containing the name, symbol, and price of all owned stock positions
-    """
-
-    positions = []
-
-    for pos in owned_stocks:
-        SYMBOL = pos
-        NAME = owned_stocks.get(SYMBOL)
-        
-        request_params = StockLatestQuoteRequest(symbol_or_symbols=SYMBOL)
-        data = dataClient.get_stock_latest_quote(request_params).get(SYMBOL)
-
-        PRICE = data.bid_price
-        
-        info = {
-            'name' : NAME,
-            'symbol' : SYMBOL,
-            'price' : PRICE
-        }
-
-        positions.append(info)
-    
-    return positions
-
 def determine_sentiment(stock_info: dict[str], nltk_classifier):
     """
     Evaluate the current opinion of the stock based on a NaiveBayesClassifier 
@@ -100,11 +71,11 @@ def determine_sentiment(stock_info: dict[str], nltk_classifier):
     Parameter:
         stock_info - A dict containing the stock info, can find info for random stock using find_stock() function
     """
-    STOCK = stock_info.get('name')
+    SYMBOL = stock_info.get('symbol')
     
-    SENTIMENT = web.predict_stock_opinion(STOCK, nltk_classifier)
+    SENTIMENT = web.predict_stock_opinion(SYMBOL, nltk_classifier)
     
-    print("{} is currently viewed as {}".format(STOCK, SENTIMENT))
+    print("{} is currently viewed as {}".format(SYMBOL, SENTIMENT))
 
     return SENTIMENT
 
@@ -113,7 +84,7 @@ def place_order(client: TradingClient, stock_info: dict[str], sentiment, owned =
     Places a buy/sell order based on the given stock info
     
     Parameter:
-        stock_info - A dict containing the stock name, stock symbol
+        stock_info - A dict containing the name, symbol, and price of stock
     """
     
     STOCK = stock_info.get('name')
@@ -136,12 +107,13 @@ def place_order(client: TradingClient, stock_info: dict[str], sentiment, owned =
                     order_data=market_order_data
                 )
                 
-                print("Sold {} shares of {} ({}) at ${}.".format(num_shares, SYMBOL,  STOCK, PRICE))
+                print("Sold {} shares of {} at ${}.".format(num_shares, SYMBOL, PRICE))
             except:
                 print("Don't own {} stock, unable to place a SELL order".format(STOCK))
         case "pos":
             if(owned):
                 sentiment = "none"
+                return
             try:
                 print("trying to buy")
                 market_order_data = MarketOrderRequest(
@@ -159,5 +131,29 @@ def place_order(client: TradingClient, stock_info: dict[str], sentiment, owned =
             except Exception:
                 print("ERROR BUYING {}".format(SYMBOL))
 
+def find_positions_info(tradeClient: TradingClient, dataClient: StockHistoricalDataClient, owned_stocks: list[str]) -> list[dict[str]]:
+    """
+    Find the latest stock_info on all currently open positions
+
+    Returns:
+        A list of dicts containing only the symbol, and price of all owned stock positions
+    """
+
+    positions = []
+
+    for pos in owned_stocks:
+        SYMBOL = pos
+        
+        request_params = StockLatestQuoteRequest(symbol_or_symbols=SYMBOL)
+        data = dataClient.get_stock_latest_quote(request_params).get(SYMBOL)
+
+        PRICE = data.bid_price
+        
+        info = {
+            'symbol' : SYMBOL,
+            'price' : PRICE
+        }
+
+        positions.append(info)
     
-    print("SUCCESSFUL ORDER OF {} STOCK".format(SYMBOL))
+    return positions

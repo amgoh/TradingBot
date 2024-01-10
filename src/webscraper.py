@@ -37,7 +37,7 @@ def predict_stock_opinion(stock, model):
     """
     sentiments = [] # list of all sentiments from all scraped articles
     
-    for i in search("latest news regarding the {} company".format(stock), tbs="qdr:2d", num=10, stop=10, pause=3):
+    for i in search("latest news regarding the {} stock company".format(stock), tbs="qdr:2d", num=10, stop=10, pause=3):
         try:
             page = requests.get(i, headers=headers, timeout=10) # access webpage, stop if loading exceeds 10 seconds
             soup = BeautifulSoup(page.content, 'html5lib') # parse HTML
@@ -62,13 +62,14 @@ def predict_stock_opinion(stock, model):
             sentiments.append(model.classify(featureset))
             
             
-        except Exception:
+        except Exception as e:
             # catch exceptions, in case of an error accessing a webpage
             print("error checking {} searches".format(stock))
             continue
         
+    print("{} sentiments are {}".format(stock, sentiments))
     # check if more negative sentiment
-    if(sentiments.count("neg") > sentiments.count("pos")):
+    if(sentiments.count("neg") >= sentiments.count("pos")):
         return "neg"
     # otherwise return positive sentiment, if equal, assume positive
     else:
