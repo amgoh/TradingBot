@@ -1,0 +1,11 @@
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/release/deps/libsocket2-81886a32c2a7d732.rmeta: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockaddr.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/socket.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockref.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sys/unix.rs
+
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/release/deps/libsocket2-81886a32c2a7d732.rlib: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockaddr.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/socket.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockref.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sys/unix.rs
+
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/release/deps/socket2-81886a32c2a7d732.d: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockaddr.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/socket.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockref.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sys/unix.rs
+
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/lib.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockaddr.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/socket.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sockref.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.5/src/sys/unix.rs:

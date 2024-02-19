@@ -1,0 +1,9 @@
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/debug/deps/libstring_cache-07a83ffcb88b9605.rmeta: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/atom.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/dynamic_set.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/static_sets.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/trivial_impls.rs
+
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/debug/deps/string_cache-07a83ffcb88b9605.d: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/atom.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/dynamic_set.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/static_sets.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/trivial_impls.rs
+
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/lib.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/atom.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/dynamic_set.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/static_sets.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/string_cache-0.8.7/src/trivial_impls.rs:

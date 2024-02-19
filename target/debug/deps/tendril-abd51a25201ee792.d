@@ -1,0 +1,11 @@
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/debug/deps/libtendril-abd51a25201ee792.rmeta: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/fmt.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/stream.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/buf32.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/tendril.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/utf8_decode.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/util.rs
+
+/Users/amoghdesai/Documents/Code/RANDOM PROJECTS/TradingBot/target/debug/deps/tendril-abd51a25201ee792.d: /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/lib.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/fmt.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/stream.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/buf32.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/tendril.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/utf8_decode.rs /Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/util.rs
+
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/lib.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/fmt.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/stream.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/buf32.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/tendril.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/utf8_decode.rs:
+/Users/amoghdesai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tendril-0.4.3/src/util.rs:

@@ -1,0 +1,1 @@
+/Users/amoghdesai/Documents/Code/RANDOM\ PROJECTS/TradingBot/target/release/TradingBot: /Users/amoghdesai/Documents/Code/RANDOM\ PROJECTS/TradingBot/src/main.rs /Users/amoghdesai/Documents/Code/RANDOM\ PROJECTS/TradingBot/src/webscraper.rs
